@@ -13,6 +13,9 @@ const limiter = rateLimit({
   max: 200,
 });
 
+// Set static routes
+app.use(express.static('public'))
+
 app.use(limiter)
 app.set('trust proxy', 1)
 
